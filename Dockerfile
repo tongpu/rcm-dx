@@ -1,10 +1,14 @@
-FROM texlive/texlive:latest
+FROM alpine:3.19
 
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get update && apt-get install -y --no-install-recommends \
-  pandoc \
+RUN apk add --no-cache \
+  envsubst \
+  font-opensans \
+  fontconfig \
+  make \
+  pandoc-cli \
+  plantuml \
   graphviz \
-  gettext
+  tectonic
 
 WORKDIR /data
 
