@@ -1,3 +1,8 @@
+---
+lof: true
+toc: true
+---
+
 # Specification of the RCM-DX Format
 
 ## License
